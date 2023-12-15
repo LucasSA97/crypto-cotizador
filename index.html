@@ -18,7 +18,7 @@
             <div class="one-half column">
                 <form id="formulario">
                     <div class="row">
-                        <label>Elige tu Moneda</label>
+                        <label data-cy="elige-moneda">Elige tu Moneda</label>
                         <select
                             class="u-full-width"
                             id="moneda"
@@ -39,11 +39,11 @@
                             id="criptomonedas"
                             name="criptomoneda"
                         >
-                            <option value="" disabled selected>Elige tu criptomoneda</option>
+                            <option  value="" disabled selected>Elige tu criptomoneda</option>
                         </select>
                     </div>
                     </div>
-                    <input class="button-primary u-full-width" type="submit" value="Cotizar" />
+                    <input data-cy="resultad-submit" class="button-primary u-full-width" type="submit" value="Cotizar" />
 
                     <div id="resultado" class="resultado"></div>
                 </form>

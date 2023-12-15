@@ -85,6 +85,9 @@ function mostrarAlerta(msj) {
     if(!existeError){
         const divMsj = document.createElement('div')
         divMsj.classList.add('error')
+        
+        //Agrego data-cy
+        divMsj.dataset.cy = 'alerta'
     
         divMsj.textContent = msj
         formulario.appendChild(divMsj)

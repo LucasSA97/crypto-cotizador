@@ -1,16 +1,4 @@
-describe('Valida form', () => {
-    it('Submit al form', () => {
-        cy.visit('http://127.0.0.1:3000/index.html')
-
-        cy.get('[data-cy="resultad-submit"]').click()
-
-        cy.get('[data-cy="alerta"]')
-            .invoke('text')
-            .should('equal', 'Ambos campos son obligatorios')
-    })
-})
-
-//Rellena los campos
+//Rellena los campos y lo elimina
 describe('Escribir en Formulario con Cypress', () => {
     it('Escribir en campos del formulario', () => {
         // Visitar la página con el formulario
@@ -31,7 +19,10 @@ describe('Escribir en Formulario con Cypress', () => {
         // Hacer clic en el botón de enviar (si es necesario)
         cy.get('[data-cy="submit"]').click()
     })
+    
+    it('Elimina la cita', () => {
+        cy.get('[data-cy="btn-eliminar"]')
+            .click()
+
+    })
 })
-
-
-
